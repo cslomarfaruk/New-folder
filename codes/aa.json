@@ -1,0 +1,40 @@
+
+{
+"students":
+	[	{
+			"name" : "anas",
+			"middleName" : "madani",
+			"age" : 32,
+			"cgpa" : 4.0,
+			"isRegistered" : true,
+			"language" : ["Bengali", "English", "Hindi"],
+			"friends": [
+				{
+					"name" : "anar",
+					"age" : 22
+				},
+				{
+					"name" : "anar",
+					"age" : 22
+				}
+			]
+		},
+		{
+			"name" : "Rabeya",
+			"middleName" : "begum",
+			"age" : 30,
+			"cgpa" : 3.90,
+			"isRegistered" : false,
+			"language" : ["Bengali", "English", "Hindi","farsi"],
+			"friends": [
+				{
+					"name" : "shakila",
+					"age" : 18
+				},
+				{
+					"name" : "shila",
+					"age" : 20
+				}
+			]
+		}]
+}
