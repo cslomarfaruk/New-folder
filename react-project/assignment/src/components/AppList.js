@@ -17,12 +17,9 @@ export default function AppList() {
     setText(e.target.value);
   };
 
-  
-
-  const editTaskHandle =(t)=>{
-      t=text;
-      setText('');
-  }
+  const editTaskHandle = () => {
+    setText("");
+  };
   const addTask = () => {
     if (text.trim() !== "")
       setTask([
@@ -62,29 +59,32 @@ export default function AppList() {
           <div key={element.id} className="ml-3 flex">
             <input type="checkbox" name="" key={task.id} className="" />
 
-
             {edit ? (
               <div key={element.id}>
-              <input type="text"  value={element.text} className="border rounded-md" />
-              <button
-                onClick={() => {setEdit(false); editTaskHandle(element.text)}}
-                className="border rounded-md bg-green-300 p-1 m-2"
-              >
-                Save
-              </button>
-
+                <input
+                  type="text"
+                  value={element.text}
+                  className="border rounded-md" />
+                <button
+                  onClick={() => {
+                    setEdit(false);
+                    editTaskHandle(element.text);
+                  } }
+                  className="border rounded-md bg-green-300 p-1 m-2"
+                >
+                  Save
+                </button>
               </div>
-              
             ) : (
               <div key={element.id}>
-              <p className="p-2">{element.text}</p>
+                <p className="p-2">{element.text}</p>
 
-              <button
-                onClick={() => setEdit(true)}
-                className="border rounded-md bg-green-300 p-1 m-2"
-              >
-                Edit
-              </button>
+                <button
+                  onClick={() => setEdit(true)}
+                  className="border rounded-md bg-green-300 p-1 m-2"
+                >
+                  Edit
+                </button>
               </div>
             )}
             <button
